@@ -64,7 +64,7 @@ Example benchmark SVG:
 ## Stack
 
 - Minecraft 1.21.11
-- Fabric Loader 0.18.6
+- Fabric Loader 0.18.4+
 - Fabric API 0.141.3+1.21.11
 - Java 21
 
