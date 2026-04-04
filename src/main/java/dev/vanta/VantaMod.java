@@ -1,4 +1,4 @@
-﻿package dev.vanta;
+package dev.vanta;
 
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;

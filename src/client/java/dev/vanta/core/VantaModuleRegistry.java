@@ -1,4 +1,4 @@
-﻿package dev.vanta.core;
+package dev.vanta.core;
 
 import dev.vanta.VantaMod;
 import java.util.ArrayList;

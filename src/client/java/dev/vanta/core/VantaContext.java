@@ -1,4 +1,4 @@
-﻿package dev.vanta.core;
+package dev.vanta.core;
 
 import dev.vanta.compat.CompatibilityState;
 import dev.vanta.config.VantaConfig;

@@ -1,4 +1,4 @@
-﻿package dev.vanta.module.anchor;
+package dev.vanta.module.anchor;
 
 import dev.vanta.config.VantaConfig;
 import dev.vanta.core.CombatSnapshot;
