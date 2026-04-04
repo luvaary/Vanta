@@ -47,7 +47,9 @@ public final class ShieldOptimizerModule implements VantaModule {
         ItemStack offhand = player.getOffHandStack();
         boolean hasShieldOffhand = settings.trackOffhand && offhand.isOf(Items.SHIELD);
         boolean isBlockingShield = hasShieldOffhand && player.isUsingItem() && player.getActiveItem().isOf(Items.SHIELD);
-        int cooldownPercent = Math.round(player.getItemCooldownManager().getCooldownProgress(Items.SHIELD, 0.0F) * 100.0F);
+        int cooldownPercent = hasShieldOffhand
+            ? Math.round(player.getItemCooldownManager().getCooldownProgress(offhand, 0.0F) * 100.0F)
+            : 0;
 
         long blockingDurationMs = 0L;
         if (isBlockingShield) {
