@@ -8,30 +8,31 @@ public final class VantaProfileApplier {
         config.profile = profile;
 
         if (profile == VantaProfile.COMPETITIVE) {
-            config.crystal.scanRange = 12.0;
-            config.crystal.highDensityThreshold = 8;
+            config.crystal.scanRange = 10.0;
+            config.crystal.highDensityThreshold = 6;
             config.crystal.cullDenseCrystalRenders = true;
-            config.crystal.denseRenderCullDistance = 10.0;
+            config.crystal.denseRenderCullDistance = 8.0;
 
-            config.minecart.scanRange = 18.0;
-            config.minecart.highDensityThreshold = 6;
+            config.minecart.scanRange = 14.0;
+            config.minecart.highDensityThreshold = 4;
             config.minecart.cullDenseMinecartRenders = true;
-            config.minecart.denseRenderCullDistance = 14.0;
+            config.minecart.denseRenderCullDistance = 10.0;
 
-            config.performance.highLoadCrystalThreshold = 10;
-            config.performance.highLoadMinecartThreshold = 6;
-            config.performance.highLoadElytraSpeed = 25.0;
-            config.performance.crystalScanIntervalNormalTicks = 1;
-            config.performance.crystalScanIntervalCombatTicks = 3;
-            config.performance.inventoryScanIntervalNormalTicks = 1;
-            config.performance.inventoryScanIntervalCombatTicks = 4;
-            config.performance.maxParticlesPerTickNormal = 320;
-            config.performance.maxParticlesPerTickCombat = 140;
-            config.performance.soundCooldownNormalMs = 40;
-            config.performance.soundCooldownCombatMs = 95;
+            config.performance.highLoadCrystalThreshold = 7;
+            config.performance.highLoadMinecartThreshold = 4;
+            config.performance.highLoadElytraSpeed = 22.0;
+            config.performance.crystalScanIntervalNormalTicks = 2;
+            config.performance.crystalScanIntervalCombatTicks = 4;
+            config.performance.inventoryScanIntervalNormalTicks = 3;
+            config.performance.inventoryScanIntervalCombatTicks = 6;
+            config.performance.dropAllParticles = true;
+            config.performance.maxParticlesPerTickNormal = 24;
+            config.performance.maxParticlesPerTickCombat = 8;
+            config.performance.soundCooldownNormalMs = 80;
+            config.performance.soundCooldownCombatMs = 180;
 
-            config.ping.highPingThresholdMs = 95;
-            config.ping.highJitterThresholdMs = 18;
+            config.ping.highPingThresholdMs = 85;
+            config.ping.highJitterThresholdMs = 14;
             config.ping.jitterEmaAlpha = 0.25;
 
             config.hud.compactWhenHighLoad = true;
@@ -58,6 +59,7 @@ public final class VantaProfileApplier {
             config.performance.crystalScanIntervalCombatTicks = 4;
             config.performance.inventoryScanIntervalNormalTicks = 2;
             config.performance.inventoryScanIntervalCombatTicks = 5;
+            config.performance.dropAllParticles = false;
             config.performance.maxParticlesPerTickNormal = 380;
             config.performance.maxParticlesPerTickCombat = 220;
             config.performance.soundCooldownNormalMs = 28;
@@ -90,6 +92,7 @@ public final class VantaProfileApplier {
         config.performance.crystalScanIntervalCombatTicks = 5;
         config.performance.inventoryScanIntervalNormalTicks = 2;
         config.performance.inventoryScanIntervalCombatTicks = 6;
+        config.performance.dropAllParticles = false;
         config.performance.maxParticlesPerTickNormal = 500;
         config.performance.maxParticlesPerTickCombat = 300;
         config.performance.soundCooldownNormalMs = 18;

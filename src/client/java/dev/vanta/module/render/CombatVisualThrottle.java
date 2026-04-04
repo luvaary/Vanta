@@ -27,12 +27,20 @@ public final class CombatVisualThrottle {
         }
 
         VantaConfig config = context.config();
-        if (!config.enabled || !config.performance.enabled || !config.performance.particleBudgetEnabled) {
+        if (!config.enabled || !config.performance.enabled) {
             return false;
         }
 
         MinecraftClient client = MinecraftClient.getInstance();
         if (client.world == null) {
+            return false;
+        }
+
+        if (config.performance.dropAllParticles) {
+            return true;
+        }
+
+        if (!config.performance.particleBudgetEnabled) {
             return false;
         }
 
