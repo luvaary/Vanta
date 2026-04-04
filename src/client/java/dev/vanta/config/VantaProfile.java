@@ -1,4 +1,4 @@
-﻿package dev.vanta.config;
+package dev.vanta.config;
 
 public enum VantaProfile {
     COMPETITIVE,

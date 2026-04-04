@@ -1,4 +1,4 @@
-﻿package dev.vanta.module.shield;
+package dev.vanta.module.shield;
 
 import dev.vanta.config.VantaConfig;
 import dev.vanta.core.CombatSnapshot;

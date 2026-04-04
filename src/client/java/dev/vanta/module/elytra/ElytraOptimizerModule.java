@@ -1,4 +1,4 @@
-﻿package dev.vanta.module.elytra;
+package dev.vanta.module.elytra;
 
 import dev.vanta.config.VantaConfig;
 import dev.vanta.core.CombatSnapshot;

@@ -1,4 +1,4 @@
-﻿package dev.vanta.config;
+package dev.vanta.config;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

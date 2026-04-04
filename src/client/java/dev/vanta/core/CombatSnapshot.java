@@ -1,4 +1,4 @@
-﻿package dev.vanta.core;
+package dev.vanta.core;
 
 public final class CombatSnapshot {
     private int nearbyCrystalCount;

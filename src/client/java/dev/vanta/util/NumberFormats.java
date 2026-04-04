@@ -1,4 +1,4 @@
-﻿package dev.vanta.util;
+package dev.vanta.util;
 
 public final class NumberFormats {
     private NumberFormats() {

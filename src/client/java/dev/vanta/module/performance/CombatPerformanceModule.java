@@ -1,4 +1,4 @@
-﻿package dev.vanta.module.performance;
+package dev.vanta.module.performance;
 
 import dev.vanta.config.VantaConfig;
 import dev.vanta.core.CombatSnapshot;

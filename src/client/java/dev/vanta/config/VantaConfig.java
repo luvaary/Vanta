@@ -1,4 +1,4 @@
-﻿package dev.vanta.config;
+package dev.vanta.config;
 
 public final class VantaConfig {
     public boolean enabled = true;

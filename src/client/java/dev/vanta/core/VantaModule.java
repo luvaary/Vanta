@@ -1,4 +1,4 @@
-﻿package dev.vanta.core;
+package dev.vanta.core;
 
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.DrawContext;
