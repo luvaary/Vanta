@@ -1,0 +1,18 @@
+name: Benchmark SVG Preview
+
+on:
+  workflow_dispatch:
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Upload benchmark SVG examples
+        uses: actions/upload-artifact@v4
+        with:
+          name: benchmark-svg-examples
+          path: docs/benchmarks/*.svg

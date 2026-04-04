@@ -1,0 +1,17 @@
+{
+  "required": true,
+  "package": "dev.vanta.mixin.client",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "ParticleManagerMixin",
+    "SoundManagerMixin",
+    "EndCrystalEntityRendererMixin",
+    "TntMinecartEntityRendererMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 0
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  }
+}

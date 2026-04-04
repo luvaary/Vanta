@@ -1,0 +1,8 @@
+.gradle/
+build/
+out/
+run/
+.idea/
+*.iml
+*.launch
+config/vanta-benchmarks/

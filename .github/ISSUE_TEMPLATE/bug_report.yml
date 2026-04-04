@@ -1,0 +1,36 @@
+name: Bug report
+description: Report a defect in Vanta
+labels:
+  - bug
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What happened?
+    validations:
+      required: true
+  - type: input
+    id: minecraft
+    attributes:
+      label: Minecraft version
+      placeholder: 1.21.11
+    validations:
+      required: true
+  - type: input
+    id: fabric_loader
+    attributes:
+      label: Fabric Loader version
+      placeholder: 0.18.6
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Include exact steps and profile used.
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or screenshots
+      description: Paste latest.log excerpts or attach screenshots.

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+  <rect width="100%" height="100%" fill="#050505"/>
+  <text x="60" y="44" fill="#f2f2f2" font-family="Consolas, Menlo, monospace" font-size="24">Vanta Example Benchmark</text>
+  <text x="60" y="66" fill="#9a9a9a" font-family="Consolas, Menlo, monospace" font-size="14">Illustrative only. Real charts are generated automatically from benchmark sessions.</text>
+
+  <rect x="60" y="90" width="1080" height="240" fill="#0e0e0e" stroke="#242424"/>
+  <rect x="60" y="390" width="1080" height="240" fill="#0e0e0e" stroke="#242424"/>
+
+  <path d="M60 312 L168 295 L276 282 L384 265 L492 251 L600 240 L708 230 L816 220 L924 214 L1032 210 L1140 206" fill="none" stroke="#68d8ff" stroke-width="3"/>
+  <text x="76" y="112" fill="#68d8ff" font-family="Consolas, Menlo, monospace" font-size="13">FPS</text>
+
+  <path d="M60 606 L168 592 L276 576 L384 561 L492 548 L600 535 L708 524 L816 512 L924 502 L1032 492 L1140 482" fill="none" stroke="#66ffb5" stroke-width="2.5"/>
+  <path d="M60 620 L168 612 L276 604 L384 594 L492 587 L600 580 L708 573 L816 566 L924 560 L1032 554 L1140 548" fill="none" stroke="#ff9a63" stroke-width="2.5" stroke-dasharray="8 6"/>
+  <text x="76" y="412" fill="#66ffb5" font-family="Consolas, Menlo, monospace" font-size="13">Frame EMA</text>
+  <text x="180" y="412" fill="#ff9a63" font-family="Consolas, Menlo, monospace" font-size="13">Frame P95</text>
+
+  <text x="60" y="664" fill="#d6d6d6" font-family="Consolas, Menlo, monospace" font-size="13">CSV source columns: fps, frame_ema_ms, frame_p95_ms, crystals, tnt_minecarts, ping_ms, ping_jitter_ms, anchor_target, elytra_speed_bps</text>
+</svg>
