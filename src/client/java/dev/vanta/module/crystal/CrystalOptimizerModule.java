@@ -1,4 +1,4 @@
-﻿package dev.vanta.module.crystal;
+package dev.vanta.module.crystal;
 
 import dev.vanta.config.VantaConfig;
 import dev.vanta.core.CombatSnapshot;

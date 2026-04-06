@@ -1,4 +1,4 @@
-﻿package dev.vanta.config;
+package dev.vanta.config;
 
 public final class VantaConfig {
     public boolean enabled = true;
@@ -91,6 +91,7 @@ public final class VantaConfig {
         public int inventoryScanIntervalNormalTicks = 1;
         public int inventoryScanIntervalCombatTicks = 4;
         public int frameP95Window = 180;
+        public boolean dropAllParticles = true;
         public boolean particleBudgetEnabled = true;
         public int maxParticlesPerTickNormal = 320;
         public int maxParticlesPerTickCombat = 140;

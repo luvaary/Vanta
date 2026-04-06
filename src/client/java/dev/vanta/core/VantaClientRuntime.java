@@ -1,4 +1,4 @@
-﻿package dev.vanta.core;
+package dev.vanta.core;
 
 import dev.vanta.VantaMod;
 import dev.vanta.compat.CompatibilityService;
@@ -46,8 +46,15 @@ public final class VantaClientRuntime {
         config.enabled = true;
         config.input.enabled = false;
         config.hud.enabled = false;
-        config.diagnostics.enabled = true;
-        config.diagnostics.exportSvg = true;
+        config.performance.dropAllParticles = true;
+        config.performance.soundCooldownNormalMs = Math.max(config.performance.soundCooldownNormalMs, 80);
+        config.performance.soundCooldownCombatMs = Math.max(config.performance.soundCooldownCombatMs, 180);
+        config.crystal.scanRange = Math.min(config.crystal.scanRange, 10.0);
+        config.crystal.denseRenderCullDistance = Math.min(config.crystal.denseRenderCullDistance, 8.0);
+        config.minecart.scanRange = Math.min(config.minecart.scanRange, 14.0);
+        config.minecart.denseRenderCullDistance = Math.min(config.minecart.denseRenderCullDistance, 10.0);
+        config.diagnostics.enabled = false;
+        config.diagnostics.exportSvg = false;
         this.context = new VantaContext(configManager, config, new CombatSnapshot(), CompatibilityService.detect());
         VantaRuntimeAccess.setContext(this.context);
 

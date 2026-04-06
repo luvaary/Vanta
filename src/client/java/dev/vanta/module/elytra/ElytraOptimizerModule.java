@@ -1,4 +1,4 @@
-﻿package dev.vanta.module.elytra;
+package dev.vanta.module.elytra;
 
 import dev.vanta.config.VantaConfig;
 import dev.vanta.core.CombatSnapshot;
@@ -46,7 +46,7 @@ public final class ElytraOptimizerModule implements VantaModule {
         }
 
         ClientPlayerEntity player = client.player;
-        boolean fallFlying = player.isFallFlying();
+        boolean fallFlying = player.isGliding();
         double speed = player.getVelocity().length() * 20.0;
         double horizontalSpeed = Math.sqrt(player.getVelocity().x * player.getVelocity().x + player.getVelocity().z * player.getVelocity().z) * 20.0;
         float pitch = player.getPitch();

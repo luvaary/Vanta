@@ -1,4 +1,4 @@
-﻿package dev.vanta;
+package dev.vanta;
 
 import dev.vanta.core.VantaClientRuntime;
 import net.fabricmc.api.ClientModInitializer;
