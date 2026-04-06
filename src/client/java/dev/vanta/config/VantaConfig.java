@@ -20,6 +20,8 @@ public final class VantaConfig {
         public int highDensityThreshold = 8;
         public boolean cullDenseCrystalRenders = true;
         public double denseRenderCullDistance = 10.0;
+        public boolean instantBreakPredictionEnabled = true;
+        public int predictionResyncTicks = 10;
     }
 
     public static final class AnchorSettings {
@@ -84,6 +86,8 @@ public final class VantaConfig {
         public boolean reduceHudDetailUnderLoad = true;
         public int crystalScanIntervalNormalTicks = 1;
         public int crystalScanIntervalCombatTicks = 3;
+        public int minecartScanIntervalNormalTicks = 1;
+        public int minecartScanIntervalCombatTicks = 3;
         public int inventoryScanIntervalNormalTicks = 1;
         public int inventoryScanIntervalCombatTicks = 4;
         public int frameP95Window = 180;

@@ -12,6 +12,8 @@ public final class VantaProfileApplier {
             config.crystal.highDensityThreshold = 6;
             config.crystal.cullDenseCrystalRenders = true;
             config.crystal.denseRenderCullDistance = 8.0;
+            config.crystal.instantBreakPredictionEnabled = true;
+            config.crystal.predictionResyncTicks = 10;
 
             config.minecart.scanRange = 14.0;
             config.minecart.highDensityThreshold = 4;
@@ -23,6 +25,8 @@ public final class VantaProfileApplier {
             config.performance.highLoadElytraSpeed = 22.0;
             config.performance.crystalScanIntervalNormalTicks = 2;
             config.performance.crystalScanIntervalCombatTicks = 4;
+            config.performance.minecartScanIntervalNormalTicks = 2;
+            config.performance.minecartScanIntervalCombatTicks = 4;
             config.performance.inventoryScanIntervalNormalTicks = 3;
             config.performance.inventoryScanIntervalCombatTicks = 6;
             config.performance.dropAllParticles = true;
@@ -46,6 +50,8 @@ public final class VantaProfileApplier {
             config.crystal.highDensityThreshold = 10;
             config.crystal.cullDenseCrystalRenders = true;
             config.crystal.denseRenderCullDistance = 11.5;
+            config.crystal.instantBreakPredictionEnabled = true;
+            config.crystal.predictionResyncTicks = 8;
 
             config.minecart.scanRange = 20.0;
             config.minecart.highDensityThreshold = 8;
@@ -57,6 +63,8 @@ public final class VantaProfileApplier {
             config.performance.highLoadElytraSpeed = 28.0;
             config.performance.crystalScanIntervalNormalTicks = 2;
             config.performance.crystalScanIntervalCombatTicks = 4;
+            config.performance.minecartScanIntervalNormalTicks = 2;
+            config.performance.minecartScanIntervalCombatTicks = 4;
             config.performance.inventoryScanIntervalNormalTicks = 2;
             config.performance.inventoryScanIntervalCombatTicks = 5;
             config.performance.dropAllParticles = false;
@@ -79,6 +87,8 @@ public final class VantaProfileApplier {
         config.crystal.highDensityThreshold = 12;
         config.crystal.cullDenseCrystalRenders = false;
         config.crystal.denseRenderCullDistance = 14.0;
+        config.crystal.instantBreakPredictionEnabled = false;
+        config.crystal.predictionResyncTicks = 6;
 
         config.minecart.scanRange = 22.0;
         config.minecart.highDensityThreshold = 10;
@@ -90,6 +100,8 @@ public final class VantaProfileApplier {
         config.performance.highLoadElytraSpeed = 32.0;
         config.performance.crystalScanIntervalNormalTicks = 2;
         config.performance.crystalScanIntervalCombatTicks = 5;
+        config.performance.minecartScanIntervalNormalTicks = 2;
+        config.performance.minecartScanIntervalCombatTicks = 5;
         config.performance.inventoryScanIntervalNormalTicks = 2;
         config.performance.inventoryScanIntervalCombatTicks = 6;
         config.performance.dropAllParticles = false;

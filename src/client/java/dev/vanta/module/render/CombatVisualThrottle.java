@@ -129,4 +129,10 @@ public final class CombatVisualThrottle {
         double cullDistanceSq = config.minecart.denseRenderCullDistance * config.minecart.denseRenderCullDistance;
         return minecart.squaredDistanceTo(client.player) > cullDistanceSq;
     }
+
+    public static void resetTemporalState() {
+        SOUND_LAST_PLAYED_MS.clear();
+        particleWindowTick = Long.MIN_VALUE;
+        particleWindowCount = 0;
+    }
 }

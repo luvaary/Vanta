@@ -3,6 +3,7 @@
   "package": "dev.vanta.mixin.client",
   "compatibilityLevel": "JAVA_21",
   "client": [
+    "ClientPlayerInteractionManagerMixin",
     "ParticleManagerMixin",
     "SoundManagerMixin",
     "EndCrystalEntityRendererMixin",

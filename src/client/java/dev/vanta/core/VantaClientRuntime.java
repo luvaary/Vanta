@@ -13,9 +13,12 @@ import dev.vanta.module.elytra.ElytraOptimizerModule;
 import dev.vanta.module.minecart.TntMinecartOptimizerModule;
 import dev.vanta.module.ping.PingOptimizerModule;
 import dev.vanta.module.performance.CombatPerformanceModule;
+import dev.vanta.module.render.CombatVisualThrottle;
+import dev.vanta.module.render.CrystalAttackPrediction;
 import dev.vanta.module.shield.ShieldOptimizerModule;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.world.ClientWorld;
 
 public final class VantaClientRuntime {
     private static final VantaClientRuntime INSTANCE = new VantaClientRuntime();
@@ -23,6 +26,7 @@ public final class VantaClientRuntime {
     private final VantaModuleRegistry moduleRegistry = new VantaModuleRegistry();
     private VantaContext context;
     private boolean initialized;
+    private ClientWorld lastWorld;
 
     private VantaClientRuntime() {
     }
@@ -79,6 +83,13 @@ public final class VantaClientRuntime {
         if (this.context == null) {
             return;
         }
+
+        if (client.world != this.lastWorld) {
+            this.lastWorld = client.world;
+            CombatVisualThrottle.resetTemporalState();
+            CrystalAttackPrediction.reset();
+        }
+
         this.moduleRegistry.onClientTick(client);
     }
 }
