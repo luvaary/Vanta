@@ -13,6 +13,7 @@ import net.minecraft.entity.vehicle.TntMinecartEntity;
 
 public final class TntMinecartOptimizerModule implements VantaModule {
     private VantaContext context;
+    private int scanCursor;
 
     public String id() {
         return "tnt_minecart_optimizer";
@@ -32,12 +33,21 @@ public final class TntMinecartOptimizerModule implements VantaModule {
         }
 
         VantaConfig.MinecartSettings settings = this.context.config().minecart;
+        VantaConfig.PerformanceSettings performance = this.context.config().performance;
         CombatSnapshot snapshot = this.context.snapshot();
 
         if (!settings.enabled || client.player == null || client.world == null) {
             snapshot.setNearbyTntMinecartCount(0);
             snapshot.setNearestTntMinecartDistance(-1.0);
             snapshot.setTntMinecartHighDensity(false);
+            return;
+        }
+
+        int interval = snapshot.isCombatLoadHigh()
+                ? performance.minecartScanIntervalCombatTicks
+                : performance.minecartScanIntervalNormalTicks;
+        this.scanCursor++;
+        if (this.scanCursor % interval != 0) {
             return;
         }
 

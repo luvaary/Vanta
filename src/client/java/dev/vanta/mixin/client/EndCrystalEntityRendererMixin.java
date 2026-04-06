@@ -4,6 +4,7 @@ import dev.vanta.config.VantaConfig;
 import dev.vanta.core.CombatSnapshot;
 import dev.vanta.core.VantaContext;
 import dev.vanta.core.VantaRuntimeAccess;
+import dev.vanta.module.render.CrystalAttackPrediction;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.entity.EndCrystalEntityRenderer;
@@ -18,6 +19,11 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public abstract class EndCrystalEntityRendererMixin {
     @Inject(method = "render(Lnet/minecraft/entity/decoration/EndCrystalEntity;FFLnet/minecraft/client/util/math/MatrixStack;Lnet/minecraft/client/render/VertexConsumerProvider;I)V", at = @At("HEAD"), cancellable = true)
     private void vanta$cullDenseCrystalRenders(EndCrystalEntity entity, float yaw, float tickDelta, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, CallbackInfo ci) {
+        if (CrystalAttackPrediction.shouldSuppressRender(entity)) {
+            ci.cancel();
+            return;
+        }
+
         VantaContext context = VantaRuntimeAccess.getContext();
         if (context == null) {
             return;

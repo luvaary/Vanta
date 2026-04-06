@@ -4,6 +4,7 @@ import dev.vanta.config.VantaConfig;
 import dev.vanta.core.CombatSnapshot;
 import dev.vanta.core.VantaContext;
 import dev.vanta.core.VantaModule;
+import dev.vanta.module.render.CrystalAttackPrediction;
 import java.util.List;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.DrawContext;
@@ -31,6 +32,8 @@ public final class CrystalOptimizerModule implements VantaModule {
         if (!this.context.config().enabled) {
             return;
         }
+
+        CrystalAttackPrediction.onClientTick(client);
 
         VantaConfig.CrystalSettings settings = this.context.config().crystal;
         VantaConfig.PerformanceSettings performance = this.context.config().performance;

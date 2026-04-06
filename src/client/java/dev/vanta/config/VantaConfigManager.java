@@ -90,6 +90,7 @@ public final class VantaConfigManager {
         config.crystal.scanRange = clamp(config.crystal.scanRange, 4.0, 24.0);
         config.crystal.highDensityThreshold = clamp(config.crystal.highDensityThreshold, 1, 64);
         config.crystal.denseRenderCullDistance = clamp(config.crystal.denseRenderCullDistance, 4.0, 32.0);
+        config.crystal.predictionResyncTicks = clamp(config.crystal.predictionResyncTicks, 1, 40);
 
         config.minecart.scanRange = clamp(config.minecart.scanRange, 6.0, 40.0);
         config.minecart.highDensityThreshold = clamp(config.minecart.highDensityThreshold, 1, 64);
@@ -110,6 +111,8 @@ public final class VantaConfigManager {
         config.performance.highLoadElytraSpeed = clamp(config.performance.highLoadElytraSpeed, 4.0, 120.0);
         config.performance.crystalScanIntervalNormalTicks = clamp(config.performance.crystalScanIntervalNormalTicks, 1, 20);
         config.performance.crystalScanIntervalCombatTicks = clamp(config.performance.crystalScanIntervalCombatTicks, 1, 60);
+        config.performance.minecartScanIntervalNormalTicks = clamp(config.performance.minecartScanIntervalNormalTicks, 1, 20);
+        config.performance.minecartScanIntervalCombatTicks = clamp(config.performance.minecartScanIntervalCombatTicks, 1, 60);
         config.performance.inventoryScanIntervalNormalTicks = clamp(config.performance.inventoryScanIntervalNormalTicks, 1, 20);
         config.performance.inventoryScanIntervalCombatTicks = clamp(config.performance.inventoryScanIntervalCombatTicks, 1, 40);
         config.performance.frameP95Window = clamp(config.performance.frameP95Window, 30, 600);
